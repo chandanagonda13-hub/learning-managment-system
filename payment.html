@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ShopEasy - Payment</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>🛍️ ShopEasy</h1>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="categories.html">Categories</a>
+        <a href="products.html">Products</a>
+        <a href="login.html">Login</a>
+        <a href="registration.html">Register</a>
+        <a href="cart.html">🛒 Cart</a>
+    </nav>
+</header>
+
+
+<div class="payment-container">
+
+    <h2>💳 Payment</h2>
+
+    <h3>Order Summary</h3>
+
+    <div class="payment-summary">
+        <p>📱 Smartphone <span>₹15,999</span></p>
+        <p>🎧 Wireless Headphones <span>₹1,999</span></p>
+
+        <hr>
+
+        <h3>Total Amount <span>₹17,998</span></h3>
+    </div>
+
+
+    <h3>Select Payment Method</h3>
+
+    <div class="payment-methods">
+
+        <label>
+            <input type="radio" name="payment" checked>
+            💳 Card
+        </label>
+
+        <label>
+            <input type="radio" name="payment">
+            📱 UPI
+        </label>
+
+        <label>
+            <input type="radio" name="payment">
+            🚚 Cash on Delivery
+        </label>
+
+    </div>
+
+
+    <form onsubmit="showMessage(event)">
+
+        <label>Name</label>
+        <input type="text" placeholder="Enter your name" required>
+
+        <label>Email</label>
+        <input type="email" placeholder="Enter your email" required>
+
+        <label>Address</label>
+        <textarea placeholder="Enter delivery address" required></textarea>
+
+        <button type="submit" class="btn">
+            Place Order
+        </button>
+
+    </form>
+
+    <p id="success-message"></p>
+
+</div>
+
+
+<footer>
+    <p>© 2026 ShopEasy | All Rights Reserved</p>
+</footer>
+
+
+<script>
+function showMessage(event) {
+
+    event.preventDefault();
+
+    document.getElementById("success-message").innerHTML =
+        "✅ Order placed successfully! Thank you for shopping with ShopEasy.";
+
+}
+</script>
+
+</body>
+</html>
